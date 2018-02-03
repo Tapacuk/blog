@@ -1,0 +1,9 @@
+body {
+  background-image: url("https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiRhf-1ks7YAhVCCpoKHW1KAgEQjRx6BAgAEAY&url=https%3A%2F%2Fwww.freshconsulting.com%2Foptimizing-laravel-performance%2F&psig=AOvVaw3m_1yweeKwOd_06TSBMgod&ust=1515699400753399"); }
+
+#feedback, #about {
+  color: black;
+  border: 3px solid black;
+  padding: 10px;
+  text-decoration: none;
+  margin-top: 5px; }
