@@ -65,7 +65,7 @@
 														  		<div class="row-content">
 														  				<h4 class="list-group-item-heading">Manage Products</h4>
 														  				<a href="admin/products" class="btn btn-default btn-raised">All products</a>
-														  				<a href="#" class="btn btn-primary btn-raised">Create product</a>
+														  				<a href="admin/products/create" class="btn btn-primary btn-raised">Create product</a>
 														  		</div>
 														  </div>		
 												  </div>

@@ -43,6 +43,7 @@ Route::group(array('prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 
 		
 		Route::get('products', 'ProductController@index');
 		Route::get('products/create', 'ProductController@create');
+		Route::post('products/create', 'ProductController@store');
 });
 
 Route::get('/profile/{id}',[ 'as' => 'users.index', 'uses' => 'UserProfileController@index']);

@@ -7,7 +7,7 @@
 						
 								@foreach($products as $product)
 										<div class="col-md-4" style="margin-top:20px;">
-												<a href="/market/{{ $product->slug }}"><img src="/uploads/market/default.png" style="border-radius:30%;width:300px;height:300px;opacity:0.7;" alt="{{ $product->name }}"></a>
+												<a href="/market/{{ $product->slug }}"><img src="/uploads/market/{{ $product->avatar }}" style="border-radius:30%;width:300px;height:300px;opacity:0.7;" alt="{{ $product->name }}"></a>
 												<h3 style="display:inline-block;">Price: <font style="font-family:Courier New, monospace;">{{ $product->priceText }}</font></h3>
 												<button type="submit" class="btn btn-warning" style="margin-left:40px;"><i class="fas fa-shopping-cart fa-3x"></i></button>
 										</div>
