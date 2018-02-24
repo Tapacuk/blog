@@ -4,7 +4,7 @@
 		<div class="container col-md-8 col-md-offset-2" style="margin-top:100px;">
 				<div class="well well bs-component">
 				
-						<form class="form-horizontal" method="post">
+						<form class="form-horizontal" enctype="multipart/form-data"  method="post">
 						
 								@foreach($errors->all() as $error)
 										<p class="alert alert-danger">{{ $error }}</p>
@@ -42,11 +42,22 @@
 																		</option>
 																@endforeach
 														</select>
-												</div>
+												<label>Upload image</label>
+														<input type="file" name="avatar">
+														<input type="hidden" name="_token" value="{{ csrf_token() }}"><br>
 										</div>
-										
+								</div>
+								<div class="form-group">
+          <div class="col-md-6 col-md-offset-2">
+            <div class="checkbox">
+            <label>
+              <input type="checkbox" name="status_post" {{ old('remember') ? 'checked' : '' }}> Change status
+            </label>
+            </div>
+          </div>
+        </div>	
 										<div class="form-group">
-												<div class="col-lg-10 col-lg-offset-2">
+												<div class="col-lg-10 col-lg-offset-2" style="margin-top:15px;">
 														<button type="reset" class="btn btn-default">Cancel</button>
 														<button type="submit" class="btn btn-primary">Submit</button>
 												</div>

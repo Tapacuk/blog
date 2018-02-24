@@ -1,7 +1,7 @@
 @extends('home')
 
 @section('content')
-		<div class="container col-md-8 col-md-offset-2" style="margin-top:100px;box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+		<div class="container col-md-8 col-md-offset-2" style="margin-top:100px;">
 				<div class="panel panel-default">
 						<div class="panel-heading">
 								<h2>Tickets</h2>

@@ -13,6 +13,7 @@ class CommentsController extends Controller
   {
   		$comment = new Comment(array(
   				'post_id' => $request->get('post_id'),
+  				'user_name' => $request->get('user_name'),
   				'content' => $request->get('content'),
   				'post_type' => $request->get('post_type')
   		));

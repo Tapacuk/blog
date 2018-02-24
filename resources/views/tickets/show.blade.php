@@ -1,7 +1,7 @@
 @extends('home')
 
 @section('content')
-		<div class="container col-md-8 col-md-offset-2" style="margin-top:100px;box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+		<div class="container col-md-8 col-md-offset-2" style="margin-top:100px;">
 				<div class="well well bs-component">
 						<div class="content">
 								<h2 class="header">{!! $ticket->title !!}</h2>

@@ -4,7 +4,7 @@
 		<div class="container col-md-8 col-md-offset-2" style="margin-top:100px;">
 				<div class="well well bs-component">
 				
-						<form class="form-horizontal" method="post">
+						<form class="form-horizontal" enctype="multipart/form-data" method="post">
 						
 								@foreach($errors->all() as $error)
 										<p class="alert alert-danger">{{ $error }}</p>
@@ -44,6 +44,9 @@
 																</option>
 														@endforeach
 												</select>
+												<label>Upload image</label>
+														<input type="file" name="avatar">
+														<input type="hidden" name="_token" value="{{ csrf_token() }}">
 										</div>
 								</div>										
 										

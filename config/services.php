@@ -34,5 +34,11 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
+    
+    'facebook' => [
+    				'client_id' => env('FB_APP_ID'),         // Your FB Client ID
+    				'client_secret' => env('FB_APP_SECRET'), // Your FB Client Secret
+    				'redirect' => 'http://larapro.dev/auth/facebook/callback',
+    ],
 
 ];

@@ -9,6 +9,7 @@
     <ul class="nav navbar-nav">
       <li class="active"><a href="{{ url('/') }}">Home</a></li>
       <li><a href="{{ url('/create') }}">Create token</a></li>
+      <li><a href="{{ url('/market') }}">Market</a></li>
       <li><a href="{{ url('/blog') }}">Blog</a></li>
       <li><a href="{{ url('/tickets') }}">Tickets</a></li>
       <li><a href="{{ url('/about') }}">About</a></li>
@@ -24,6 +25,8 @@
                                 </a>
 
                                 <ul class="dropdown-menu">
+                                				<li>
+                                						<a href="{!! action('UserProfileController@index', Auth::user()->id) !!}">Profile</a>
                                 				@if(Auth::user()->hasRole('manager'))
                                     <li>
                                         <a href="/admin">Admin</a>
@@ -49,5 +52,7 @@
 	@show()
 
 @section('content')
-	
+		@foreach($errors->all() as $error)
+				<p class="alert alert-danger" style="margin-top:50px">{{ $error }}</p>
+		@endforeach
 @endsection

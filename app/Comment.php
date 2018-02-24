@@ -16,4 +16,7 @@ class Comment extends Model
 		{
 		  return $this->morphTo();
 		}
+		public function author() {
+    return $this->belongsTo('App\User'); 
+  }
 }

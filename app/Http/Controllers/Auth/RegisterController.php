@@ -6,6 +6,9 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Laravel\Socialite\Facades\Socialite;
+use Illuminate\Support\Facades\Auth;
+use Image;
 
 class RegisterController extends Controller
 {
@@ -67,5 +70,49 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+    
+    public function redirectToProvider_facebook()
+    {
+    		return Socialite::driver('facebook')->redirect();
+    }
+    
+    public function handleProviderCallback_facebook()
+    {
+    		$socialUser = Socialite::driver('facebook')->user();
+    		
+    		$data = [
+    				'facebook_id' => $socialUser->getId(),
+    				'name' => $socialUser->name,
+    				'email' => $socialUser->getEmail(),
+    				'avatar' => $socialUser->getAvatar()
+    		];
+    
+    $user = User::where('facebook_id', $data['facebook_id'])->first();
+    
+    if(is_null($user)) {
+    
+    		$user = User::where('email', $data['email'])->whereNotNull('email')->first();
+    		
+    		if(!is_null($user)) { 
+    				$user->facebook_id = $data['facebook_id'];
+    				$user->update();
+    		}	else {
+    		
+		    		$user = new User($data);
+		    		$user->save();
+    				
+    				$avatar = $socialUser->getAvatar();
+    				$filename = time() . '.' . 'jpg';
+    				Image::make($avatar)->resize(300, 300)->save( public_path('/uploads/avatars/' . $filename) );
+    				
+    				$user->avatar = $filename;
+    				$user->update();
+    		}
+    }
+    
+    Auth::login($user, true);
+
+    return redirect($this->redirectPath()); 
     }
 }

@@ -4,12 +4,12 @@
 		<div class="container" style="margin-top:100px;">
 				<div class="row banner">
 				
-						<div class="col-md-12">
+						<div class="col-md-4">
 						
 								<div class="list-group">
 										<div class="list-group-item">
 												<div class="row-action-primary">
-														<i class="mdi-social-person"></i>
+														<i class="fas fa-user fa-2x"></i>
 												</div>
 												<div class="row-content">
 														<div class="action-secondary"><i class="mdi-social-info"></i></div>
@@ -20,7 +20,7 @@
 												<div class="list-group-separator"></div>
 												<div class="list-group-item">
 														<div class="row-action-primary">
-																<i class="mdi-social-group"></i>
+																<i class="fas fa-users fa-2x"></i>
 														</div>
 														<div class="row-content">
 																<div class="action-secondary"<i class="mdi-material-info"></i></div>
@@ -32,10 +32,10 @@
 														<div class="list-group-separator"></div>
 														<div class="list-group-item">
 																<div class="row-action-primary">
-																		<i class="mdi-editor-border-color"></i>
+																		<i class="fas fa-edit fa-2x"></i>
 																</div>
 																<div class="row-content">
-																		<div class="action-secondary"><i class="mdi-material-info"></i></div>
+																		<div class="action-secondary"></div>
 																		<h4 class="list-group-item-heading">Manage posts</h4>
 																		<a href="/admin/posts" class="btn btn-default btn-raised">All posts</a>
 																		<a href="/admin/posts/create" class="btn btn-primary btn-raised">Create a post</a>
@@ -45,7 +45,7 @@
 																
 																<div class="list-group-item">
 																		<div class="row-action-primary">
-																				<i class="mdi-file-folder"></i>
+																				<i class="fas fa-folder-open fa-2x"></i>
 																		</div>
 																		<div class="row-content">
 																				<div class="action-secondary"><i class="mdi-material-info"></i></div>
@@ -54,7 +54,20 @@
 																				<a href="/admin/categories/create" class="btn btn-primary btn-raised">New Category</a>
 																		</div>
 																</div>
-																<div class="list-group-separator"></div>						
-														</div>
-												</div>																				
+																<div class="list-group-separator"></div>					
+														</div>		
+												</div>
+												
+												<div class="col-md-4">
+												  <div class="list-group">
+												  		<div class="list-group-item">
+												  				<i class="fas fa-archive fa-2x"></i>
+														  		<div class="row-content">
+														  				<h4 class="list-group-item-heading">Manage Products</h4>
+														  				<a href="admin/products" class="btn btn-default btn-raised">All products</a>
+														  				<a href="#" class="btn btn-primary btn-raised">Create product</a>
+														  		</div>
+														  </div>		
+												  </div>
+												</div>																					
 @endsection

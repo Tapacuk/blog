@@ -40,10 +40,34 @@ Route::group(array('prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 
 		Route::get('categories', 'CategoriesController@index');
 		Route::get('categories/create', 'CategoriesController@create');
 		Route::post('categories/create', 'CategoriesController@store');
+		
+		Route::get('products', 'ProductController@index');
+		Route::get('products/create', 'ProductController@create');
 });
 
+Route::get('/profile/{id}',[ 'as' => 'users.index', 'uses' => 'UserProfileController@index']);
+Route::get('/profile/{id}/pass', 'UserProfileController@changePass');
+Route::post('/profile/{id}/pass', 'UserProfileController@storePass');
+Route::post('/profile', 'UserProfileController@update_avatar');
+Route::get('/users/posts/{id}', 'UserProfileController@posts');
+Route::get('/users/posts/{id}/edit', 'UserProfileController@edit');
+Route::post('/users/posts/{id}/edit', 'UserProfileController@update');
+
 Route::get('/blog', 'BlogController@index');
+Route::post('/blog', 'BlogController@search');
 Route::get('/blog/{slug?}', 'BlogController@show');
+Route::get('/bloggers/create', 'BlogController@create');
+Route::post('/bloggers/create', 'BlogController@store');
+
+Route::get('auth/facebook', 'Auth\RegisterController@redirectToProvider_facebook');
+Route::get('auth/facebook/callback', 'Auth\RegisterController@handleProviderCallback_facebook');
+
+/* Market Routes */
+
+Route::get('/market', 'Market\MarketController@index');
+Route::get('/market/{slug?}', 'Market\MarketController@show');
+
+/* End Market Routes */
 
 Auth::routes();
 

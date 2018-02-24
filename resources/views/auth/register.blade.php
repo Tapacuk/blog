@@ -66,6 +66,9 @@
                                 <button type="submit" class="btn btn-primary">
                                     Register
                                 </button>
+                                <a href="/auth/facebook" class="btn btn-primary">
+                                    <i class="fab fa-facebook fa-2x"></i>
+                                </a>
                             </div>
                         </div>
                     </form>

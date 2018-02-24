@@ -2,6 +2,9 @@
 @section('header')
 <head>
    <title>Home Page</title>
+   <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+  	<script>tinymce.init({ selector:'textarea#post_content' });</script>
+   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
    <!-- Latest compiled and minified CSS -->
    <link href="{{ asset('css/font-awesome.css') }}" rel="stylesheet" type="text/css">
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
