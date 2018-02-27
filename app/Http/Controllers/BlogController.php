@@ -27,7 +27,9 @@ class BlogController extends Controller
       if($post->status)
       {
 		      $comments = $post->comments()->get();
-		      !empty($comments) ? $user = User::whereName($comments->pluck('user_name'))->firstOrFail() : 
+		      //dd($comments->pluck('user_name'));
+		      //if(!is_null($comments)) 
+		      !$comments ? $user = User::whereName($comments->pluck('user_name'))->firstOrFail() : 
 		      $user = Auth::user();
 			
 		      //dd($comments);

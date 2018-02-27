@@ -20,14 +20,14 @@
 								
 								<fieldset>
 								
-										<legend>Create a new product <i class="fab fa-product-hunt"></i></legend>
+										<legend>Update a product <i class="fab fa-product-hunt"></i></legend>
 										
 										<div class="form-group">
 												<div class="col-lg-2">
 														<label for="name" class="control-label">Name</label>
 												</div>
 												<div class="col-lg-10">		
-														<input type="text" class="form-control" id="name" placeholder="Name" name="name">
+														<input type="text" class="form-control" id="name" placeholder="Name" name="name" value="{{ $product->name }}">
 												</div>
 										</div>
 										<div class="form-group">
@@ -35,7 +35,7 @@
 														<label for="description" class="control-label">Description</label>
 												</div>
 												<div class="col-lg-10">
-														<textarea class="form-control" name="description" id="description" rows="3" style="resize:none;" placeholder="Description"></textarea>
+														<textarea class="form-control" name="description" id="description" rows="3" style="resize:none;" placeholder="Description">{!! $product->description !!}</textarea>
 												</div>
 										</div>
 										<div class="form-group">
@@ -43,7 +43,7 @@
 														<label for="priceTxt" class="control-label">Text price</label>
 												</div>
 												<div class="col-lg-10">		
-														<input type="text" class="form-control" id="priceTxt" placeholder="Text price" name="priceTxt">
+														<input type="text" class="form-control" id="priceTxt" placeholder="Text price" name="priceTxt" value="{{ $product->priceText }}">
 												</div>		
 										</div>
 										<div class="form-group">
@@ -51,7 +51,7 @@
 														<label for="price" class="control-label">Price</label>
 												</div>
 												<div class="col-lg-10">		
-														<input type="text" class="form-control" id="price" placeholder="Price" name="price">
+														<input type="text" class="form-control" id="price" placeholder="Price" name="price" value="{{ $product->price }}">
 												</div>		
 										</div>
 										<div class="form-group">
@@ -61,7 +61,7 @@
 												<div class="col-lg-10">
 														<select class="form-control" id="category" name="categories[]" multiple>
 														@foreach($categories as $category)
-																<option value="{!! $category->id !!}" @if(in_array($category->id, $selectedCategories)) selected=" selected" @endif>
+																<option value="{!! $category->id !!}">
 																		{!! $category->name !!}
 																</option>
 														@endforeach

@@ -54,20 +54,28 @@
 																				<a href="/admin/categories/create" class="btn btn-primary btn-raised">New Category</a>
 																		</div>
 																</div>
-																<div class="list-group-separator"></div>					
+																			
 														</div>		
 												</div>
 												
 												<div class="col-md-4">
 												  <div class="list-group">
-												  		<div class="list-group-item">
+														  <div class="list-group-item">
 												  				<i class="fas fa-archive fa-2x"></i>
 														  		<div class="row-content">
 														  				<h4 class="list-group-item-heading">Manage Products</h4>
 														  				<a href="admin/products" class="btn btn-default btn-raised">All products</a>
 														  				<a href="admin/products/create" class="btn btn-primary btn-raised">Create product</a>
 														  		</div>
-														  </div>		
+														  </div>
+														  <div class="list-group-item">
+												  				<i class="fas fa-folder-open fa-2x"></i>
+														  		<div class="row-content">
+														  				<h4 class="list-group-item-heading">Manage Categories</h4>
+														  				<a href="admin/products/categories" class="btn btn-default btn-raised">All Categories</a>
+														  				<a href="admin/products/categories/create" class="btn btn-primary btn-raised">Create Category</a>
+														  		</div>
+														  </div>				
 												  </div>
 												</div>																					
 @endsection

@@ -33,7 +33,7 @@
 												</div>
 										</div>
 										
-										<div clas=="form-group">
+										<div class="form-group">
 												<label for="select" class="col-lg-2 control-label">Categories</label>
 												<div class="col-lg-10">
 														<select class="form-control" id="categories" name="categories[]" multiple>
@@ -42,11 +42,11 @@
 																		</option>
 																@endforeach
 														</select>
-												<label>Upload image</label>
+														<label>Upload image</label>
 														<input type="file" name="avatar">
 														<input type="hidden" name="_token" value="{{ csrf_token() }}"><br>
+												</div>
 										</div>
-								</div>
 								<div class="form-group">
           <div class="col-md-6 col-md-offset-2">
             <div class="checkbox">

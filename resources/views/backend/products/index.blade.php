@@ -20,7 +20,7 @@
 											 	<tbody>
 													 	<tr>
 																 <td>{{ $product->id }}</td>
-																 <td><a href="/market/{{ $product->slug }}">{{ $product->name }}</a></td>
+																 <td><a href="/admin/products/edit/{{ $product->slug }}">{{ $product->name }}</a></td>
 																 <td>{{ $product->description }}</td>
 																 <td>{{ $product->priceText }}</td>
 													 	</tr>
